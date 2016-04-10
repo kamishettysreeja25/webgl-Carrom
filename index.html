@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Game</title>
+		<style>
+			body {
+				background-color: black;
+			}
+			#gameCanvas {
+				background-color: black;
+				width: 1000px;
+				height: 600px;
+				margin: auto;
+				align: center;
+			}
+			#scoreboard {
+				
+				font-family: Segoe UI, Helvetica, Ubuntu, sans-serif;
+				color: white;
+			}
+			#scores {
+				font-size:200%;
+				padding:0;
+				margin:0;
+				color: white;
+				left: 100px;
+				text-align: center;
+				right: 5000px;
+				top: 4000px;
+			}
+			#title {
+				text-align: center;
+				background-color: white;
+				color: black;
+				font-size: 100%;
+			}
+			#title1 {
+				text-align: center;
+				background-color: white;
+				color: black;
+				font-size: 200%;
+
+			}
+			#instructions {
+				font-size:150%;
+				padding:0;
+				margin:0;
+				color: white;
+				left: 10px;
+				
+				right: 5000px;
+				top: 4000px;
+			}
+		#txt
+		{
+				font-size:200%;
+				padding:0;
+				margin:0;
+				color: white;
+			text-align: center;
+		}
+		#timer
+		{
+			font-size:200%;
+				padding:0;
+				margin:0;
+				color: white;
+			text-align: center;	
+		}
+		</style>
+	</head>
+	<body onload='setup();' >
+<audio controls>
+  <source src="song.mp3" type="audio/ogg">
+  Your browser does not support the audio tag.
+</audio> 
+		<h1 id='title1'>Carrom Board 3D Game</h1>
+			
+
+		<div id='instructions'>
+			<h3>Instructions</h3>
+			<ul>
+				<ul>Controls</ul>
+				<li>move the striker by right & left arrow keys</li>
+				<li>Increase or Decrease the power by f and s keys</li>
+				<li>a & d to increase and decrease the angle of shooting</li>
+				<li>space : Shoot the striker</li>
+				<li>p : Player View</li>
+				<li>t : Tower View</li>
+				<li>w : Coin View</li>
+				<li>s : Decrease the speed</li>
+				<li>f : Increase the speed</li>
+				<ul>Scores</ul>
+				<li>Your score starts at 100 </li>
+				<li>Score reduces by 1 point every 5 seconds and by 20 points for pocketing a
+				coin of the opposite colour or the striker.</li>
+				<li>You get 5 points for  pocketing  a  coin  of  your  colour.  </li>
+				<li> If  you  pocket  the
+		red, you get 20 points if you follow it with a coin of your
+colour in the next attempt. If not, the red goes back at the
+centre</li>
+</ul>
+
+		 </div>
+		<div id='scoreboard'>
+			<h6 id='scores'>score = 100</h6>
+		</div><h6 id='timer'>Timer</h6>
+        <div id="txt"></div>
+
+		<div id='gameCanvas'></div>
+		<script src='./Scripts/three.min.js'></script>
+		<script src='./Scripts/keyboard.js'></script>
+		<script src='./Scripts/game.js'></script>
+
+	</body>
+</html>
